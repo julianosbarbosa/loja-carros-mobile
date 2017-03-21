@@ -1,5 +1,12 @@
-angular.module('starter').controller('ListagemController', function($scope) {
+angular.module('starter').controller('ListagemController', function($scope, CarroService) {
 
+    //Carregando do back-end
+
+    // CarroService.obterCarros().then(function(dados) {
+    //     $scope.listaDeCarros = dados
+    // });
+
+    //Carregando sem back-end
     $scope.listaDeCarros = [
         { "nome": "BMW 120i", "preco": 70000 },
         { "nome": "Onix 1.6", "preco": 35000 },
