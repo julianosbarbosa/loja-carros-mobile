@@ -30,6 +30,16 @@ angular.module('starter').controller('CarroEscolhidoController', function($state
     }
 });
 
-angular.module('starter').controller('FinalizarPedidoController', function($stateParams, $scope) {
+angular.module('starter').controller('FinalizarPedidoController', function($stateParams, $scope, $ionicPopup, $state) {
     $scope.carroFinalizado = angular.fromJson($stateParams.carro);
+    $scope.finalizarPedido = function() {
+        $ionicPopup.alert({
+            title: 'Parabens!',
+            template: 'Entraremos em contato com você'
+        }).then(function() {
+            $state.go('listagem');
+        });
+
+
+    };
 });
