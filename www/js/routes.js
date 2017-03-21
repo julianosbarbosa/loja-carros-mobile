@@ -7,7 +7,7 @@ angular.module('starter').config(function($stateProvider, $urlRouterProvider) {
         })
 
     .state('carroescolhido', {
-        url: '/carroescolhido',
+        url: '/carroescolhido/:carro',
         templateUrl: 'templates/carroescolhido.html',
         controller: 'CarroEscolhidoController'
     });
