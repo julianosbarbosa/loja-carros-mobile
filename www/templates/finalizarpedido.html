@@ -1,0 +1,29 @@
+<ion-view>
+    <ion-nav-title>Estamos Quase Lá!</ion-nav-title>
+    <ion-content>
+        <div class="card">
+            <div class="item item-divider">
+                Carro: {{carroFinalizado.nome}}
+            </div>
+            <div class="item item-text-wrap">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nome</span>
+                        <input type="text" placeholder="Nome completo">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Endereço</span>
+                        <input type="text" placeholder="Rua, nº, Bairro, Cidade, CEP">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Email</span>
+                        <input type="text" placeholder="email@email.com">
+                    </label>
+                </div>
+            </div>
+            <div class="item item-divider">
+                Preço: R{{carroFinalizado.preco | currency}}
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
