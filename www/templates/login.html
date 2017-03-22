@@ -1,0 +1,16 @@
+<ion-view>
+    <ion-nav-title>Olá, faça seu login</ion-nav-title>
+    <ion-content>
+        <form class="list" ng-submit="realizarLogin()">
+            <label class="item item-input">
+                <span class="input-label">E-mail</span>
+                <input type="text" ng-model="login.email">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Senha</span>
+                <input type="password" ng-model="login.senha">
+            </label>
+            <button class="button button-block button-positive" type="submit">Entrar</button>
+        </form>
+    </ion-content>
+</ion-view>
