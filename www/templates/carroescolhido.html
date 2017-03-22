@@ -2,11 +2,15 @@
     <ion-nav-title>Carro escolhido</ion-nav-title>
     <ion-content>
         <div class="card">
+
             <div class="item item-divider">
                 Ótima Escolha!
             </div>
             <div class="item item-text-wrap">
-                {{carroEscolhido.nome}}
+                <a class="item item-thumbnail-left" href="#/carroescolhido/{{carro}}">
+                    <img src=""> {{carroEscolhido.nome}}
+                </a>
+
                 <ul class="list">
                     <li class="item item-toggle" ng-repeat="acessorio in listaDeAcessorios">
                         {{acessorio.nome}}

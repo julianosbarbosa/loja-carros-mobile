@@ -1,11 +1,19 @@
 <ion-view>
     <ion-nav-title>Escolha o Seu Carro</ion-nav-title>
     <ion-content>
-        <ion-list>
 
-            <ion-item ng-repeat="carro in listaDeCarros" href="#/carroescolhido/{{carro}}">{{carro.nome}} - R{{carro.preco | currency}}</ion-item>
 
-        </ion-list>
+        <div class="item item-divider">
+            <ion-list>
 
+                <ion-item ng-repeat="carro in listaDeCarros">
+                    <a class="item item-thumbnail-left" href="#/carroescolhido/{{carro}}">
+                        <img src=""> {{carro.nome}} - R{{carro.preco | currency}}
+                    </a>
+                </ion-item>
+
+            </ion-list>
+
+        </div>
     </ion-content>
 </ion-view>
