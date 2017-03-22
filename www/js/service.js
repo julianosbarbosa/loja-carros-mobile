@@ -2,7 +2,7 @@ angular.module('starter')
     .service('CarroService', function($http) {
 
         var url = 'https://endereco_do_servico.com';
-
+        // http://aluracar.herokuapp.com/
         return {
             obterCarros: function() {
                 return $http.get(url).then(function(response) {
@@ -13,6 +13,11 @@ angular.module('starter')
             salvarPedido: function(pedido) {
                 return $http.get(url + "salvarpedido", pedido).then(function(response) {
                     return "Deu certo."
+                });
+            },
+            realizarLogin: function(dadosDoLogin) {
+                return $http.get(url + "login", dadosDoLogin).then(function(response) {
+                    return response.data;
                 });
             }
         }

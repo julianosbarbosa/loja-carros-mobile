@@ -6,7 +6,12 @@ angular.module('starter').config(function($stateProvider, $urlRouterProvider) {
             controller: 'ListagemController'
         })
 
-    .state('carroescolhido', {
+    .state('login', {
+            url: '/login',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginController'
+        })
+        .state('carroescolhido', {
             url: '/carroescolhido/:carro',
             templateUrl: 'templates/carroescolhido.html',
             controller: 'CarroEscolhidoController'
@@ -16,5 +21,5 @@ angular.module('starter').config(function($stateProvider, $urlRouterProvider) {
             templateUrl: 'templates/finalizarpedido.html',
             controller: 'FinalizarPedidoController'
         });
-    $urlRouterProvider.otherwise('listagem');
+    $urlRouterProvider.otherwise('login');
 });

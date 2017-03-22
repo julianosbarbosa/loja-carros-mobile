@@ -66,3 +66,29 @@ angular.module('starter').controller('FinalizarPedidoController', function($stat
 
     };
 });
+
+angular.module('starter')
+    .controller('LoginController', function($scope, CarroService, $ionicPopup, $state) {
+
+        $scope.login = {};
+
+        $scope.realizarLogin = function() {
+            var dadosDoLogin = {
+                params: {
+                    email: $scope.login.email,
+                    senha: $scope.login.senha
+                }
+
+            }
+            $state.go('listagem')
+            CarroService.realizarLogin(dadosDoLogin).then(function(dados) {
+
+            }, function(erro) {
+                $ionicPopup.alert({
+                    title: 'Opa!',
+                    template: 'E-mail ou senha incorretos.'
+                })
+
+            })
+        }
+    });
